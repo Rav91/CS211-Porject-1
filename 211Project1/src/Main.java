@@ -1,9 +1,5 @@
-package sample;
-
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -28,10 +24,21 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        MyColor c = MyColor.Black;
+        c.setColor(2,4,6);
+
+        MyLine l = new MyLine(0, 0, 100, 100);
+        l.setColor(c.getColor());
+        System.out.println(l);
+
         primaryStage.setTitle("Hello World");
         Group root = new Group();
-        Canvas canvas = new Canvas(300, 275);
+        Canvas canvas = new Canvas(300, 250);
         GraphicsContext gc = canvas.getGraphicsContext2D();
+
+        l.draw(gc);
+
+        root.getChildren().add(canvas);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
