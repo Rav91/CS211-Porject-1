@@ -1,7 +1,7 @@
 import java.awt.*;
 
 public class MyOval extends MyShape {
-    MyOval(int x, int y, Color c) {
+    MyOval(double x, double y) {
         super(x, y);
     }
 }

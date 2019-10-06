@@ -20,22 +20,28 @@ public class Main extends Application {
             return this.color;
         }
         public void setColor(int r, int b, int g){ this.color = Color.rgb(r, g, b); }
+
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        MyColor c = MyColor.Black;
-        c.setColor(2,4,6);
-
-        MyLine l = new MyLine(0, 0, 100, 100);
-        l.setColor(c.getColor());
-        System.out.println(l);
-
         primaryStage.setTitle("Hello World");
         Group root = new Group();
-        Canvas canvas = new Canvas(300, 250);
+        Canvas canvas = new Canvas(300, 300);
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
+        MyColor c = MyColor.Black;
+
+        MyRectangle r = new MyRectangle(canvas.getWidth()/2, canvas.getHeight()/2, 100, 100);
+        r.setColor(c.getColor());
+        System.out.println(r);
+        r.draw(gc);
+
+        c.setColor(72, 240, 117);
+
+        MyLine l = new MyLine(0, 0, canvas.getWidth(), canvas.getHeight());
+        l.setColor(c.getColor());
+        System.out.println(l);
         l.draw(gc);
 
         root.getChildren().add(canvas);

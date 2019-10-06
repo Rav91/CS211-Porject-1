@@ -3,12 +3,12 @@ import javafx.scene.canvas.GraphicsContext;
 import java.awt.*;
 
 public class MyLine extends MyShape {
-    MyLine(int x, int y, Color c) {
+    MyLine(double x, double y) {
         super(x, y);
     }
-    private int x2;
-    private int y2;
-    MyLine(int x, int y, int x2, int y2){
+    private double x2;
+    private double y2;
+    MyLine(double x, double y, double x2, double y2){
         super(x, y);
         this.x2 = x2;
         this.y2 = y2;
