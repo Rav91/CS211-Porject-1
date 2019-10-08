@@ -1,3 +1,4 @@
+import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
@@ -35,7 +36,9 @@ public class MyShape {
         return "MyShape centered at x = " + x + ", y = " + y;
     }
 
-    public void draw(GraphicsContext gc){
+    public void draw(GraphicsContext gc, Canvas canvas){
+        gc.setFill(getColor());
+        gc.fillRect(0, 0, canvas.getWidth(), canvas.getWidth());
     }
 
     public void setColor(javafx.scene.paint.Color color) {

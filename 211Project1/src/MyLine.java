@@ -21,6 +21,6 @@ public class MyLine extends MyShape {
 
     public void draw(GraphicsContext gc){
         gc.setStroke(getColor());
-        gc.strokeLine(getX(), getX(), x2, y2);
+        gc.strokeLine(getX(), getY(), x2, y2);
     }
 }

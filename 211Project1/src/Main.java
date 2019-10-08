@@ -3,6 +3,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -30,10 +31,22 @@ public class Main extends Application {
         Canvas canvas = new Canvas(300, 300);
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
+        StackPane pane = new StackPane();
+        pane.getChildren().add(canvas);
+
         MyColor c = MyColor.Black;
 
-        MyRectangle r = new MyRectangle(canvas.getWidth()/2, canvas.getHeight()/2, 100, 100);
+        MyShape s = new MyShape(0, 0);
+        s.setColor(c.getColor());
+        s.draw(gc, canvas);
+
+        c.setColor(200, 200, 200);
+
+        //MyRectangle r = new MyRectangle(canvas.getWidth()/2, canvas.getHeight()/2, 100, 100);
+        MyOval r = new MyOval(canvas.getWidth()/2, canvas.getHeight()/2, 100, 100);
         r.setColor(c.getColor());
+        c.setColor(50, 50, 50);
+        r.setOvalColor(c.getColor());
         System.out.println(r);
         r.draw(gc);
 

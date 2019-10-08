@@ -1,16 +1,30 @@
 import javafx.scene.canvas.GraphicsContext;
 
-import java.awt.*;
-
 public class MyRectangle extends MyShape {
     MyRectangle(double x, double y) {
         super(x, y);
     }
-    double height;
-    double width;
+    private double height;
+    private double width;
     MyRectangle(double x, double y, double height, double width){
         super(x, y);
         this.height = height;
+        this.width = width;
+    }
+
+    double getHeight(){
+        return  height;
+    }
+
+    double getWidth(){
+        return width;
+    }
+
+    void setHeight(double height){
+        this.height = height;
+    }
+
+    void setWidth(double width){
         this.width = width;
     }
 
