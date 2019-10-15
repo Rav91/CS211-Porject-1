@@ -1,7 +1,5 @@
 import javafx.scene.canvas.GraphicsContext;
 
-import java.awt.*;
-
 public class MyLine extends MyShape {
     MyLine(double x, double y) {
         super(x, y);

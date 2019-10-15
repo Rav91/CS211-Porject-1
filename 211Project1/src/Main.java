@@ -32,7 +32,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("211ProjectOne");
         Group root = new Group();
         Canvas canvas = new Canvas(500, 250);
         GraphicsContext gc = canvas.getGraphicsContext2D();
