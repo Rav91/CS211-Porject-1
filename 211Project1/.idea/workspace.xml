@@ -5,15 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/211Project1/Main$MyColor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/211Project1/Main$MyColor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/211Project1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/211Project1/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/211Project1/MyLine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/211Project1/MyLine.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/211Project1/MyOval.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/211Project1/MyOval.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/211Project1/MyRectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/211Project1/MyRectangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/211Project1/MyShape.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/211Project1/MyShape.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyLine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyOval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyOval.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyRectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyShape.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,11 +95,11 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ravid\Documents\GitHub\CS211-Porject-1\211Project1\src" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
     </key>
   </component>
   <component name="RunDashboard">

@@ -9,12 +9,18 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
     enum MyColor{
-        Black(Color.rgb(0, 0, 0));
+        Black(0, 0, 0),
+        Lavender(150, 123, 182),
+        Yellow(255, 255, 0),
+        LightBlue(135, 206, 250),
+        Brown(165, 42, 42),
+        LightGreen(124, 252, 0),
+        Beige(245, 245, 220);
 
         private Color color;
 
-        MyColor(Color rgb) {
-            this.color = rgb;
+        MyColor(int r, int g, int b){
+            this.color = Color.rgb(r, g, b);
         }
 
         public Color getColor(){
@@ -28,32 +34,37 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         primaryStage.setTitle("Hello World");
         Group root = new Group();
-        Canvas canvas = new Canvas(300, 300);
+        Canvas canvas = new Canvas(500, 250);
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         StackPane pane = new StackPane();
         pane.getChildren().add(canvas);
 
-        MyColor c = MyColor.Black;
+        MyColor black = MyColor.Black;
+        MyColor lavender = MyColor.Lavender;
+        MyColor yellow = MyColor.Yellow;
+        MyColor lightBlue = MyColor.LightBlue;
+        MyColor brown = MyColor.Brown;
+        MyColor lightGreen = MyColor.LightGreen;
+        MyColor beige = MyColor.Beige;
 
-        MyShape s = new MyShape(0, 0);
-        s.setColor(c.getColor());
-        s.draw(gc, canvas);
+        MyOval outer = new MyOval(canvas.getWidth()/2, canvas.getHeight()/2, canvas.getHeight()/2, canvas.getWidth()/2);
+        outer.setColor(beige.getColor());
+        outer.setOvalColor(lightGreen.getColor());
+        outer.draw(gc);
 
-        c.setColor(200, 200, 200);
+        MyOval middle = new MyOval(outer.getX(), outer.getY(), outer.getHeight()/Math.sqrt(2), outer.getWidth()/Math.sqrt(2));
+        middle.setColor(brown.getColor());
+        middle.setOvalColor(lightBlue.getColor());
+        middle.draw(gc);
 
-        //MyRectangle r = new MyRectangle(canvas.getWidth()/2, canvas.getHeight()/2, 100, 100);
-        MyOval r = new MyOval(canvas.getWidth()/2, canvas.getHeight()/2, 100, 100);
-        r.setColor(c.getColor());
-        c.setColor(50, 50, 50);
-        r.setOvalColor(c.getColor());
-        System.out.println(r);
-        r.draw(gc);
-
-        c.setColor(72, 240, 117);
+        MyOval inner = new MyOval(outer.getX(), outer.getY(), middle.getHeight()/Math.sqrt(2), middle.getWidth()/Math.sqrt(2));
+        inner.setColor(yellow.getColor());
+        inner.setOvalColor(lavender.getColor());
+        inner.draw(gc);
 
         MyLine l = new MyLine(0, 0, canvas.getWidth(), canvas.getHeight());
-        l.setColor(c.getColor());
+        l.setColor(black.getColor());
         System.out.println(l);
         l.draw(gc);
 
