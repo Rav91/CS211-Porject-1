@@ -34,7 +34,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         primaryStage.setTitle("211ProjectOne");
         Group root = new Group();
-        Canvas canvas = new Canvas(500, 250);
+        Canvas canvas = new Canvas(500, 500);
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         StackPane pane = new StackPane();
